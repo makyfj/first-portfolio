@@ -6,9 +6,11 @@ import {
   ListItem,
   ListItemText,
   Container,
+  Hidden,
 } from "@material-ui/core";
 import { Home } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import SideDrawer from "./SideDrawer";
 
 // css style
 import { makeStyles } from "@material-ui/core";
@@ -48,19 +50,24 @@ const Header = () => {
             <Home fontSize="large" />
           </IconButton>
 
-          <List
-            component="nav"
-            aria-label="main navigation"
-            className={navbarStyle.navbarDisplayFlex}
-          >
-            {navLinks.map(({ title, path }) => (
-              <Link to={path} key={title} className={navbarStyle.linkText}>
-                <ListItem button>
-                  <ListItemText primary={title} />
-                </ListItem>
-              </Link>
-            ))}
-          </List>
+          <Hidden mdDown>
+            <List
+              component="nav"
+              aria-label="main navigation"
+              className={navbarStyle.navbarDisplayFlex}
+            >
+              {navLinks.map(({ title, path }) => (
+                <Link to={path} key={title} className={navbarStyle.linkText}>
+                  <ListItem button>
+                    <ListItemText primary={title} />
+                  </ListItem>
+                </Link>
+              ))}
+            </List>
+          </Hidden>
+          <Hidden mdUp>
+            <SideDrawer navLinks={navLinks} />
+          </Hidden>
         </Container>
       </Toolbar>
     </AppBar>
