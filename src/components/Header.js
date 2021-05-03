@@ -11,6 +11,8 @@ import {
 import { Home } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import SideDrawer from "./SideDrawer";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 // css style
 import { makeStyles } from "@material-ui/core";
@@ -56,6 +58,16 @@ const Header = () => {
               aria-label="main navigation"
               className={navbarStyle.navbarDisplayFlex}
             >
+              <ListItem>
+                <a href="https://github.com/makyfj">
+                  <GitHubIcon />
+                </a>
+              </ListItem>
+              <ListItem>
+                <a href="https://linkedin.com/in/franklin-jara-fj">
+                  <LinkedInIcon />
+                </a>
+              </ListItem>
               {navLinks.map(({ title, path }) => (
                 <Link to={path} key={title} className={navbarStyle.linkText}>
                   <ListItem button>
