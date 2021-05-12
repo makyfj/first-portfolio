@@ -1,8 +1,7 @@
-import "./App.css";
 // import Navbar from "./components/Navbar/Navbar";
-import Education from "./components/Education/Education";
-import Projects from "./components/Projects/Projects";
-import Home from "./components/Home/Home";
+import Education from "./components/Education";
+import Projects from "./components/Projects";
+import Home from "./components/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { CssBaseline } from "@material-ui/core";
 import Header from "./components/Header";
