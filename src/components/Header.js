@@ -48,7 +48,9 @@ const Header = () => {
       <Toolbar>
         <Container maxWidth="lg" className={navbarStyle.navbarDisplayFlex}>
           <IconButton edge="start" color="inherit" aria-label="home">
-            <Home fontSize="large" />
+            <Link to="/">
+              <Home fontSize="large" />
+            </Link>
           </IconButton>
 
           <Hidden mdDown>
@@ -70,7 +72,7 @@ const Header = () => {
               {navLinks.map(({ title, path }) => (
                 <Link to={path} key={title} className={navbarStyle.linkText}>
                   <ListItem button>
-                    <ListItemText primary={title} />
+                    <ListItemText primary={title} fontSize="large" />
                   </ListItem>
                 </Link>
               ))}

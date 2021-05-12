@@ -16,13 +16,13 @@ const useStyles = makeStyles({
   },
   linkText: {
     textDecoration: `none`,
-    textTransform: `uppercase`,
+    textTransform: `lowercase`,
     color: `black`,
   },
 });
 
 const SideDrawer = ({ navLinks }) => {
-  const navbarStyle = useState();
+  const navbarStyle = useStyles();
   const [state, setState] = useState({ right: false });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -55,7 +55,7 @@ const SideDrawer = ({ navLinks }) => {
   );
 
   return (
-    <React.Fragment>
+    <>
       <IconButton
         edge="start"
         aria-label="menu"
@@ -66,12 +66,12 @@ const SideDrawer = ({ navLinks }) => {
       <Drawer
         anchor="right"
         open={state.right}
-        onOpen={toggleDrawer("right", true)}
-        onClose={toggleDrawer("right", false)}
+        onOpen={toggleDrawer(state.right)}
+        onClose={toggleDrawer(state.right)}
       >
         {sideDrawerList("right")}
       </Drawer>
-    </React.Fragment>
+    </>
   );
 };
 
