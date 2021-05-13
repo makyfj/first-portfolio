@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   linkText: {
     textDecoration: `none`,
     textTransform: `lowercase`,
-    color: `white`,
+    color: `black`,
   },
   navbarDisplayFlex: {
     display: `flex`,
