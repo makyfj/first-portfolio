@@ -44,7 +44,7 @@ const Home = () => {
 
   return (
     <>
-      <Container className={classes.mainRoot} maxWidth="xlg">
+      <Container className={classes.mainRoot} maxWidth={false}>
         <Container className={classes.rootAvatar}>
           <Avatar
             alt="Franklin Jara"

@@ -26,6 +26,7 @@ const useStyles = makeStyles({
     textDecoration: `none`,
     textTransform: `lowercase`,
     color: `black`,
+    fontSize: "large",
   },
   navbarDisplayFlex: {
     display: `flex`,
@@ -61,24 +62,24 @@ const Header = () => {
             >
               <ListItem>
                 <a href="https://github.com/makyfj">
-                  <GitHubIcon />
+                  <GitHubIcon fontSize="large" />
                 </a>
               </ListItem>
               <ListItem>
                 <a href="https://linkedin.com/in/franklin-jara-fj">
-                  <LinkedInIcon />
+                  <LinkedInIcon fontSize="large" />
                 </a>
               </ListItem>
               {navLinks.map(({ title, path }) => (
                 <Link to={path} key={title} className={navbarStyle.linkText}>
                   <ListItem button>
-                    <ListItemText primary={title} fontSize="large" />
+                    <ListItemText primary={title} />
                   </ListItem>
                 </Link>
               ))}
             </List>
           </Hidden>
-          <Hidden mdUp>
+          <Hidden lgUp>
             <SideDrawer navLinks={navLinks} />
           </Hidden>
         </Container>
